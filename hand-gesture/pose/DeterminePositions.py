@@ -78,141 +78,107 @@ def create_known_finger_poses():
     thumbs_up.position_id = 0
     known_finger_poses.append(thumbs_up)
 
-    ####### 2 Spock
-    spock = FingerDataFormation()
-    spock.position_name = 'Pause'
-    spock.curl_position = [
+    ####### 2 Pause o
+    pause = FingerDataFormation()
+    pause.position_name = 'Pause'
+    pause.curl_position = [
+        [FingerCurled.NoCurl],   # Thumb
+        [FingerCurled.HalfCurl], # Index
+        [FingerCurled.HalfCurl], # Middle
+        [FingerCurled.HalfCurl], # Ring
+        [FingerCurled.HalfCurl]  # Little
+    ]
+    pause.curl_position_confidence = [
+        [1.0], # Thumb
+        [1.0], # Index
+        [1.0], # Middle
+        [1.0], # Ring
+        [1.0]  # Little
+    ]
+    pause.finger_position = [
+        [FingerPosition.DiagonalUpLeft], # Thumb
+        [FingerPosition.DiagonalUpLeft], # Index
+        [FingerPosition.DiagonalUpLeft], # Middle
+        [FingerPosition.DiagonalUpLeft], # Ring
+        [FingerPosition.DiagonalUpLeft] # Little
+    ]
+    pause.finger_position_confidence = [
+        [1.0], # Thumb
+        [1.0], # Index
+        [1.0], # Middle
+        [1.0], # Ring
+        [1.0]  # Little
+    ]
+    pause.position_id = 2
+    known_finger_poses.append(pause)
+
+    ####### 3 Volume Up
+    volume_up = FingerDataFormation()
+    volume_up.position_name = 'Volume Up'
+    volume_up.curl_position = [
         [FingerCurled.NoCurl],   # Thumb
         [FingerCurled.NoCurl], # Index
         [FingerCurled.NoCurl], # Middle
         [FingerCurled.NoCurl], # Ring
         [FingerCurled.NoCurl]  # Little
     ]
-    spock.curl_position_confidence = [
+    volume_up.curl_position_confidence = [
         [1.0], # Thumb
         [1.0], # Index
         [1.0], # Middle
         [1.0], # Ring
         [1.0]  # Little
     ]
-    spock.finger_position = [
+    volume_up.finger_position = [
         [FingerPosition.VerticalUp, FingerPosition.DiagonalUpLeft], # Thumb
         [FingerPosition.VerticalUp], # Index
         [FingerPosition.VerticalUp], # Middle
         [FingerPosition.VerticalUp], # Ring
         [FingerPosition.VerticalUp] # Little
     ]
-    spock.finger_position_confidence = [
+    volume_up.finger_position_confidence = [
         [1.0, 0.5], # Thumb
         [1.0], # Index
         [1.0], # Middle
         [1.0], # Ring
         [1.0]  # Little
     ]
-    spock.position_id = 1
-    known_finger_poses.append(spock)
-
-    ####### 3 Volume Up
-    volumeUp = FingerDataFormation()
-    volumeUp.position_name = 'Volume Up'
-    volumeUp.curl_position = [
-        [FingerCurled.FullCurl, FingerCurled.NoCurl],   # Thumb
-        [FingerCurled.NoCurl], # Index
-        [FingerCurled.NoCurl], # Middle
-        [FingerCurled.FullCurl], # Ring
-        [FingerCurled.FullCurl]  # Little
-    ]
-    volumeUp.curl_position_confidence = [
-        [1.0, 1.0], # Thumb
-        [1.0], # Index
-        [1.0], # Middle
-        [1.0], # Ring
-        [1.0]  # Little
-    ]
-    volumeUp.finger_position = [
-        [FingerPosition.VerticalUp, FingerPosition.HorizontalLeft], # Thumb
-        [FingerPosition.DiagonalUpLeft, FingerPosition.VerticalUp], # Index
-        [FingerPosition.DiagonalUpRight], # Middle
-        [FingerPosition.DiagonalUpRight], # Ring
-        [FingerPosition.DiagonalUpRight] # Little
-    ]
-    volumeUp.finger_position_confidence = [
-        [0.5, 1.0], # Thumb
-        [1.0, 0.4], # Index
-        [1.0], # Middle
-        [1.0], # Ring
-        [1.0]  # Little
-    ]
-    volumeUp.position_id = 2
-    known_finger_poses.append(volumeUp)
+    volume_up.position_id = 2
+    known_finger_poses.append(volume_up)
 
     ####### 4 Volume Down
-    volumeDown = FingerDataFormation()
-    volumeDown.position_name = 'Volume Down'
-    volumeDown.curl_position = [
-        [FingerCurled.FullCurl, FingerCurled.NoCurl],   # Thumb
-        [FingerCurled.NoCurl], # Index
-        [FingerCurled.NoCurl], # Middle
-        [FingerCurled.FullCurl], # Ring
-        [FingerCurled.FullCurl]  # Little
-    ]
-    volumeDown.curl_position_confidence = [
-        [1.0, 1.0], # Thumb
-        [1.0], # Index
-        [1.0], # Middle
-        [1.0], # Ring
-        [1.0]  # Little
-    ]
-    volumeDown.finger_position = [
-        [FingerPosition.VerticalDown, FingerPosition.HorizontalLeft], # Thumb
-        [FingerPosition.DiagonalDownLeft, FingerPosition.VerticalUp], # Index
-        [FingerPosition.DiagonalDownRight], # Middle
-        [FingerPosition.DiagonalDownRight], # Ring
-        [FingerPosition.DiagonalDownRight] # Little
-    ]
-    volumeDown.finger_position_confidence = [
-        [0.5, 1.0], # Thumb
-        [1.0, 0.4], # Index
-        [1.0], # Middle
-        [1.0], # Ring
-        [1.0]  # Little
-    ]
-    volumeDown.position_id = 3
-    known_finger_poses.append(volumeDown)
-
-    ####### 4 Pointer down
-    pointer_down = FingerDataFormation()
-    pointer_down.position_name = 'Volume Down'
-    pointer_down.curl_position = [
+    volume_down = FingerDataFormation()
+    volume_down.position_name = 'Volume Down'
+    volume_down.curl_position = [
         [FingerCurled.NoCurl],   # Thumb
         [FingerCurled.NoCurl], # Index
-        [FingerCurled.FullCurl], # Middle
-        [FingerCurled.FullCurl], # Ring
-        [FingerCurled.FullCurl]  # Little
+        [FingerCurled.NoCurl], # Middle
+        [FingerCurled.NoCurl], # Ring
+        [FingerCurled.NoCurl]  # Little
     ]
-    pointer_down.curl_position_confidence = [
+    volume_down.curl_position_confidence = [
         [1.0], # Thumb
         [1.0], # Index
         [1.0], # Middle
         [1.0], # Ring
         [1.0]  # Little
     ]
-    pointer_down.finger_position = [
-        [FingerPosition.DiagonalDownLeft, FingerPosition.HorizontalLeft], # Thumb
+    volume_down.finger_position = [
+        [FingerPosition.VerticalDown], # Thumb
         [FingerPosition.VerticalDown], # Index
         [FingerPosition.VerticalDown], # Middle
         [FingerPosition.VerticalDown], # Ring
         [FingerPosition.VerticalDown] # Little
     ]
-    pointer_down.finger_position_confidence = [
-        [1.0, 0.5], # Thumb
+    volume_down.finger_position_confidence = [
+        [1.0], # Thumb
         [1.0], # Index
         [1.0], # Middle
         [1.0], # Ring
         [1.0]  # Little
     ]
-    pointer_down.position_id = 3
-    known_finger_poses.append(pointer_down)
+    volume_down.position_id = 3
+    known_finger_poses.append(volume_down)
 
     ####### 5 Hand left
     hand_left = FingerDataFormation()
@@ -281,178 +247,5 @@ def create_known_finger_poses():
     ]
     hand_right.position_id = 5
     known_finger_poses.append(hand_right)
-
-    ####### 2 Thumbs up right
-    # thumbs_up_right = FingerDataFormation()
-    # thumbs_up_right.position_name = 'Thumbs Up Right'
-    # thumbs_up_right.curl_position = [
-    #     [FingerCurled.NoCurl],   # Thumb
-    #     [FingerCurled.FullCurl], # Index
-    #     [FingerCurled.FullCurl], # Middle
-    #     [FingerCurled.FullCurl], # Ring
-    #     [FingerCurled.FullCurl]  # Little
-    # ]
-    # thumbs_up_right.curl_position_confidence = [
-    #     [1.0], # Thumb
-    #     [1.0], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # thumbs_up_right.finger_position = [
-    #     [FingerPosition.HorizontalLeft, FingerPosition.DiagonalUpLeft, FingerPosition.DiagonalDownLeft], # Thumb
-    #     [FingerPosition.VerticalUp, FingerPosition.DiagonalUpRight, FingerPosition.DiagonalUpLeft], # Index
-    #     [FingerPosition.VerticalUp, FingerPosition.DiagonalUpRight, FingerPosition.DiagonalUpLeft], # Middle
-    #     [FingerPosition.VerticalUp, FingerPosition.DiagonalUpRight, FingerPosition.DiagonalUpLeft], # Ring
-    #     [FingerPosition.VerticalUp, FingerPosition.DiagonalUpRight, FingerPosition.DiagonalUpLeft] # Little
-    # ]
-    # thumbs_up_right.finger_position_confidence = [
-    #     [1.0, 0.25, 0.25], # Thumb
-    #     [1.0, 0.25, 0.25], # Index
-    #     [1.0, 0.25, 0.25], # Middle
-    #     [1.0, 0.25, 0.25], # Ring
-    #     [1.0, 0.25, 0.25]  # Little
-    # ]
-    # thumbs_up_right.position_id = 1
-    # known_finger_poses.append(thumbs_up_right)
-
-    ####### 4 I Love you
-    # i_love_you = FingerDataFormation()
-    # i_love_you.position_name = 'I love you'
-    # i_love_you.curl_position = [
-    #     [FingerCurled.NoCurl],   # Thumb
-    #     [FingerCurled.NoCurl], # Index
-    #     [FingerCurled.FullCurl], # Middle
-    #     [FingerCurled.FullCurl], # Ring
-    #     [FingerCurled.NoCurl]  # Little
-    # ]
-    # i_love_you.curl_position_confidence = [
-    #     [1.0], # Thumb
-    #     [1.0], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # i_love_you.finger_position = [
-    #     [FingerPosition.DiagonalUpLeft], # Thumb
-    #     [FingerPosition.DiagonalUpLeft, FingerPosition.VerticalUp], # Index
-    #     [FingerPosition.DiagonalUpRight], # Middle
-    #     [FingerPosition.DiagonalUpRight], # Ring
-    #     [FingerPosition.DiagonalUpRight, FingerPosition.VerticalUp] # Little
-    # ]
-    # i_love_you.finger_position_confidence = [
-    #     [1.0], # Thumb
-    #     [1.0, 0.25], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0, 0.25]  # Little
-    # ]
-    # i_love_you.position_id = 3
-    # known_finger_poses.append(i_love_you)
-
-
-    ####### 5 Pointer
-    # pointer = FingerDataFormation()
-    # pointer.position_name = 'Pointing Up'
-    # pointer.curl_position = [
-    #     [FingerCurled.NoCurl],   # Thumb
-    #     [FingerCurled.NoCurl], # Index
-    #     [FingerCurled.FullCurl], # Middle
-    #     [FingerCurled.FullCurl], # Ring
-    #     [FingerCurled.FullCurl]  # Little
-    # ]
-    # pointer.curl_position_confidence = [
-    #     [1.0], # Thumb
-    #     [1.0], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # pointer.finger_position = [
-    #     [FingerPosition.VerticalUp, FingerPosition.DiagonalUpLeft], # Thumb
-    #     [FingerPosition.VerticalUp, FingerPosition.DiagonalUpLeft], # Index
-    #     [FingerPosition.VerticalUp], # Middle
-    #     [FingerPosition.VerticalUp], # Ring
-    #     [FingerPosition.VerticalUp] # Little
-    # ]
-    # pointer.finger_position_confidence = [
-    #     [1.0, 0.5], # Thumb
-    #     [1.0, 0.3], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # pointer.position_id = 4
-    # known_finger_poses.append(pointer)
-
-
-    ####### 6 Ok
-    # ok_pos = FingerDataFormation()
-    # ok_pos.position_name = 'Okay'
-    # ok_pos.curl_position = [
-    #     [FingerCurled.HalfCurl],   # Thumb
-    #     [FingerCurled.HalfCurl], # Index
-    #     [FingerCurled.NoCurl], # Middle
-    #     [FingerCurled.NoCurl], # Ring
-    #     [FingerCurled.NoCurl]  # Little
-    # ]
-    # ok_pos.curl_position_confidence = [
-    #     [1.0], # Thumb
-    #     [1.0], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # ok_pos.finger_position = [
-    #     [FingerPosition.DiagonalUpLeft, FingerPosition.HorizontalLeft], # Thumb
-    #     [FingerPosition.DiagonalUpLeft, FingerPosition.HorizontalLeft], # Index
-    #     [FingerPosition.VerticalUp], # Middle
-    #     [FingerPosition.VerticalUp], # Ring
-    #     [FingerPosition.VerticalUp] # Little
-    # ]
-    # ok_pos.finger_position_confidence = [
-    #     [1.0, 0.5], # Thumb
-    #     [1.0, 0.2], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # ok_pos.position_id = 5
-    # known_finger_poses.append(ok_pos)
-
-
-    ####### 7 Victory
-    # victory = FingerDataFormation()
-    # victory.position_name = 'Victory'
-    # victory.curl_position = [
-    #     [FingerCurled.FullCurl, FingerCurled.NoCurl],   # Thumb
-    #     [FingerCurled.NoCurl], # Index
-    #     [FingerCurled.NoCurl], # Middle
-    #     [FingerCurled.FullCurl], # Ring
-    #     [FingerCurled.FullCurl]  # Little
-    # ]
-    # victory.curl_position_confidence = [
-    #     [1.0, 1.0], # Thumb
-    #     [1.0], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # victory.finger_position = [
-    #     [FingerPosition.VerticalUp, FingerPosition.HorizontalLeft], # Thumb
-    #     [FingerPosition.DiagonalUpLeft, FingerPosition.VerticalUp], # Index
-    #     [FingerPosition.DiagonalUpRight], # Middle
-    #     [FingerPosition.DiagonalUpRight], # Ring
-    #     [FingerPosition.DiagonalUpRight] # Little
-    # ]
-    # victory.finger_position_confidence = [
-    #     [0.5, 1.0], # Thumb
-    #     [1.0, 0.4], # Index
-    #     [1.0], # Middle
-    #     [1.0], # Ring
-    #     [1.0]  # Little
-    # ]
-    # victory.position_id = 6
-    # known_finger_poses.append(victory)
 
     return known_finger_poses

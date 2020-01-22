@@ -68,7 +68,7 @@ def predict_by_geometry(keypoint_coord3d_v, known_finger_poses, threshold):
 		if obtained_positions[max_pose_label] >= threshold:
 			score_label = max_pose_label
 
-	# print(obtained_positions)
+	print(obtained_positions)
 	return score_label
 
 def predict_by_neural_network(keypoint_coord3d_v, known_finger_poses, pb_file, threshold):
