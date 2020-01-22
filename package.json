@@ -1,0 +1,16 @@
+{
+  "name": "spotify-hands-free",
+  "version": "0.0.1",
+  "description": "Spotify Hands Free - MacOS only",
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "Quentin Brunet"
+    },
+    {
+      "name": "Léo Legron"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}

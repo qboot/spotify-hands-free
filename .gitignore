@@ -1,0 +1,4 @@
+images/*
+!images/.gitkeep
+images_out/*
+!images_out/.gitkeep
