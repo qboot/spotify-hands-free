@@ -1,0 +1,2 @@
+*.pickle filter=lfs diff=lfs merge=lfs -text
+cpm-model-mpii filter=lfs diff=lfs merge=lfs -text
