@@ -8,6 +8,11 @@ The goal is to interact with Spotify, on MacOS, with gestures.
 
 Each second, the webcam will take a photo using imagesnap (Objective-C), the client (Node.js) will send via a socket the image path to a Python script which will do the analyze. Once it's done, result is sent back to Node.js which will call appropriate AppleScript action.
 
+| Play ![](examples/play.jpg "Play") | Pause ![](examples/pause.jpg "Pause") |
+|:-----------:|:-----------:|
+| **Previous Track** ![](examples/previousTrack.jpg "Previous Track") | **Next Track** ![](examples/nextTrack.jpg "Next Track") |
+| **Volume Up** ![](examples/volumeUp.jpg "Volume Up") | **Volume Down** ![](examples/volumeDown.jpg "Volume Down") |
+
 ## Machine Learning
 
 **First Layer:** Hand3D library is used to extract 3D hand pose from a single RGB Image. The model is trained with more than 40.000 images.
